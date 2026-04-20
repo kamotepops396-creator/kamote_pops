@@ -1,6 +1,6 @@
 const OrderProcess = () => {
   return (
-    <div className="w-full flex items-center justify-center py-20">
+    <div className="w-full  flex items-center justify-center py-50">
 
       <div className="px-6 max-w-7xl mx-auto text-center" id="order">
 
