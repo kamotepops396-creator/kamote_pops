@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-
+import kamotepops from "../assets/kamotepops.png";
 export default function Navbar() {
   const [active, setActive] = useState("home");
   const [open, setOpen] = useState(false);
@@ -30,14 +30,16 @@ export default function Navbar() {
   }, []);
 
   const closeMenu = () => setOpen(false);
-
+  const scrollTop = () => {window.scrollTo({ top: 0, behavior: "smooth" });
+    setActive("home");
+    closeMenu();
+  }
   return (
     <nav className="bg-[rgb(247,238,237)] p-5 flex justify-between items-center fixed w-full top-0 z-50">
-      
-      
-      <h1 className="text-2xl font-bold text-secondary">Kamote Pops</h1>
-
-     
+    <span className="flex"  onClick={scrollTop} style={{ cursor: "pointer" }}>
+      <img src={kamotepops} alt="Logo" className="h-10 inline mr-2" />
+       <h1 className="text-2xl font-bold text-secondary">Kamote Pops</h1>
+    </span>
       <ul className="hidden md:flex gap-8">
         {sections.map((sec) => (
           <li key={sec} className="relative">
