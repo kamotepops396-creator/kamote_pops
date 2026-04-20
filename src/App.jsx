@@ -8,7 +8,7 @@ import Hero from './pages/Hero'
 import Menu from './pages/Menu'
 import About from './pages/About'
 import OrderProcess from './pages/OrderProcess'
-import Footer from './Components/footer'
+import Footer from './Components/Footer'
 function App() {
   const [count, setCount] = useState(0)
 
