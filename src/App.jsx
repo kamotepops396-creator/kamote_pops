@@ -9,6 +9,7 @@ import Menu from './pages/Menu'
 import About from './pages/About'
 import OrderProcess from './pages/OrderProcess'
 import Footer from './Components/Footer'
+import { Analytics } from "@vercel/analytics/react";
 function App() {
   const [count, setCount] = useState(0)
 
@@ -28,6 +29,7 @@ function App() {
       <OrderProcess/>
      </section>
      <Footer/>
+     <Analytics/>
     </div>
   )
 }
